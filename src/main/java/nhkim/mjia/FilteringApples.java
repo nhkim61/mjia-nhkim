@@ -24,6 +24,10 @@ public class FilteringApples {
 
 	List<Apple> heavyApples2 = filterApples(inventory, (Apple a) -> a.getWeight() > 150 );
 	System.out.println(heavyApples2);
+
+	List<Apple> weirdApples = filterApples(inventory, (Apple a) -> a.getWeight() < 80 || "brown".equals(a.getColor()));
+	System.out.println(weirdApples);
+	
     }
 
     public static List<Apple> filterApples(List<Apple> inventory, Predicate<Apple> p) {
