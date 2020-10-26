@@ -1,3 +1,4 @@
+
 package nhkim.mjia;
 
 import java.util.List;
@@ -58,5 +59,15 @@ public class FilteringApples {
 
     public static boolean isHeavyApple(Apple apple) {
 	return apple.getWeight() > 150;
+    }
+
+    public static List<Apple> filter(List<Apple> inventory, ApplePredicate p) {
+	List<Apple> result = new ArrayList<>();
+	for (Apple apple : inventory) {
+	    if(p.test(apple)) {
+		result.add(apple);
+	    }
+	}
+	return result;
     }
 }

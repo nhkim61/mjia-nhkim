@@ -1,11 +1,13 @@
 package nhkim.mjia;
 
+import nhkim.mjia.Color;
+
 public class Apple {
 
     private int weight = 0;
-    private String color = "";
+    private Color color;
 
-    public Apple (int weight, String color) {
+    public Apple (int weight, Color color) {
 	this.weight = weight;
 	this.color = color;
     }
@@ -14,7 +16,7 @@ public class Apple {
 	return this.weight;
     }
 
-    public String getColor() {
+    public Color getColor() {
 	return this.color;
     }
 
